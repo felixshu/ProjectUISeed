@@ -1,0 +1,59 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>INSPINIA | @ViewBag.Title</title>
+    @Styles.Render("~/Content/css")
+    @Styles.Render("~/font-awesome/css")
+	<!--This bundle was moved by the Telerik VS Extensions for compatibility reasons-->
+	@Scripts.Render("~/bundles/jquery")
+	<link href="https://kendo.cdn.telerik.com/2016.2.504/styles/kendo.common.min.css" rel="stylesheet" type="text/css" />
+	<link href="https://kendo.cdn.telerik.com/2016.2.504/styles/kendo.mobile.all.min.css" rel="stylesheet" type="text/css" />
+	<link href="https://kendo.cdn.telerik.com/2016.2.504/styles/kendo.dataviz.min.css" rel="stylesheet" type="text/css" />
+	<link href="https://kendo.cdn.telerik.com/2016.2.504/styles/kendo.flat.min.css" rel="stylesheet" type="text/css" />
+	<link href="https://kendo.cdn.telerik.com/2016.2.504/styles/kendo.dataviz.flat.min.css" rel="stylesheet" type="text/css" />
+	<script src="https://kendo.cdn.telerik.com/2016.2.504/js/jquery.min.js"></script>
+	<script src="https://kendo.cdn.telerik.com/2016.2.504/js/jszip.min.js"></script>
+	<script src="https://kendo.cdn.telerik.com/2016.2.504/js/kendo.all.min.js"></script>
+	<script src="https://kendo.cdn.telerik.com/2016.2.504/js/kendo.aspnetmvc.min.js"></script>
+	<script src="@Url.Content("~/Scripts/kendo.modernizr.custom.js")"></script>
+</head>
+<body>
+
+<!-- Wrapper-->
+<div id="wrapper">
+
+    <!-- Navigation -->
+    @Html.Partial("_Navigation")
+
+    <!-- Page wraper -->
+    <div id="page-wrapper" class="gray-bg">
+
+        <!-- Top Navbar -->
+        @Html.Partial("_TopNavbar")
+
+        <!-- Main view -->
+        @RenderBody()
+
+        <!-- Footer -->
+        @Html.Partial("_Footer")
+
+    </div>
+    <!-- End page wrapper-->
+
+</div>
+<!-- End wrapper-->
+
+
+@Scripts.Render("~/bundles/bootstrap")
+@Scripts.Render("~/plugins/metsiMenu")
+@Scripts.Render("~/plugins/pace")
+@Scripts.Render("~/plugins/slimScroll")
+@Scripts.Render("~/bundles/inspinia")
+
+</body>
+</html>
+@RenderSection("scripts", required: false)
